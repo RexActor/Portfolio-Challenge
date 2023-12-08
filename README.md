@@ -13,7 +13,8 @@ N/A
 
 ## Preview
 
-![Screenshot Provided](Images/Screenshot.png)
+
+![alt text](Images/Screenshot.png)
 
 ## Deployed Website
 
