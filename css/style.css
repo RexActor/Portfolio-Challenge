@@ -32,21 +32,21 @@ p {
   color: white;
   font-weight: 900;
   font-size: 50px;
+  margin: 20px;
 }
 
 
 .navigation {
   display: flex;
   flex-direction: row;
-
+  align-items: center;
 
 }
 
 .float-right {
-  float: right;
-  display: flex;
-
-  margin-top: -50px;
+  position: absolute;
+  right: 0px;
+  margin-top: -60px;
 }
 
 nav a {
@@ -54,6 +54,14 @@ nav a {
   text-decoration: none;
   margin: 20px;
   color: gray;
+}
+
+nav a:hover {
+  color: rgba(247, 243, 243, 0.767);
+  font-weight: 700;
+
+
+  text-shadow: 5px 5px rgba(14, 13, 13, 1);
 }
 
 header {
@@ -131,10 +139,12 @@ header {
 
 }
 
+.content a {
+  text-decoration: none;
+}
+
 .work-grid {
   display: grid;
-
-
   grid-template-areas: 'mainProject mainProject'
     'secondProject thirdProject'
     'fourthProject fifthProject';
@@ -144,11 +154,16 @@ header {
   position: relative;
   margin: 10px;
   border: 5px solid var(--darkBlue);
+
 }
 
 .workItem:hover {
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 15px 15px 10px 0px rgba(0, 0, 0, 1);
+  border: 5px solid red;
+  transition: all 0.3s ease-in-out;
 }
+
+
 
 .subHeader {
   position: absolute;
@@ -174,44 +189,72 @@ header {
   margin-bottom: 5px;
 }
 
-.mainProject {
-  grid-area: mainProject;
-  background: url("../images/02-portfolio-1.jpg");
+.main-project-image {
+  background: url("../images/seo.jpg");
   height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
-.secondProject {
+.secondProject-project-image {
+  background: url("../images/jakes-eatery.jpg");
+
+}
+
+.thirdProject-project-image {
+  background: url("../images/pre-work.jpg");
+
+}
+
+.fourthProject-project-image {
+  background: url("../images/tbc-1.jpg");
+
+}
+
+.fifthProject-project-image {
+  background: url("../images/tbc-2.jpg");
+
+}
+
+.secondProject-project-image,
+.thirdProject-project-image,
+.fourthProject-project-image,
+.fifthProject-project-image {
+  height: var(--projectCardSize);
+
+}
+
+.main-project-image,
+.secondProject-project-image,
+.thirdProject-project-image,
+.fourthProject-project-image,
+.fifthProject-project-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+#mainProject {
+  grid-area: mainProject;
+
+}
+
+#secondProject {
   grid-area: secondProject;
-  background: url("../images/02-portfolio-2.jpg");
-  height: var(--projectCardSize);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.thirdProject {
+#thirdProject {
   grid-area: thirdProject;
-  background: url("../images/02-portfolio-3.jpg");
-  height: var(--projectCardSize);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.fourthProject {
+#fourthProject {
   grid-area: fourthProject;
-  background: url("../images/02-portfolio-4.jpg");
-  height: var(--projectCardSize);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.fifthProject {
+#fifthProject {
   grid-area: fifthProject;
-  background: url("../images/02-run-buddy.jpg");
-  height: var(--projectCardSize);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 
@@ -229,5 +272,32 @@ header {
 
 .contactMenu a {
   text-decoration: none;
+
+}
+
+@media screen and (max-width:768px) {
+
+  header {
+    display: none;
+  }
+
+  .subCategory {
+    display: none;
+  }
+
+  .content {
+    border: none;
+  }
+
+  .work-grid {
+    grid-template-areas: 'mainProject '
+      'secondProject '
+
+      'thirdProject'
+      'fourthProject'
+      'fifthProject'
+    ;
+  }
+
 
 }
