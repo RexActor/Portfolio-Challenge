@@ -14,7 +14,7 @@ N/A
 ## Preview
 
 
-![alt text](Images/Screenshot.png)
+![alt text](images/Screenshot.png)
 
 ## Deployed Website
 
