@@ -28,6 +28,8 @@ p {
   margin: 0;
 }
 
+
+
 .portfolio {
   color: white;
   font-weight: 900;
@@ -67,8 +69,25 @@ nav a:hover {
 header {
   background: var(--darkBlue);
   height: 100px;
+  position: relative;
 
 }
+
+.avatar {
+  position: absolute;
+  bottom: 40px;
+  right: -300px;
+
+
+}
+
+.avatar img {
+  height: 60%;
+  width: 45%;
+  backdrop-filter: blur(10px);
+}
+
+
 
 .hero-banner {
   background: url("../images/banner-image.jpg");
@@ -276,6 +295,10 @@ header {
 }
 
 @media screen and (max-width:768px) {
+
+  .avatar {
+    display: none;
+  }
 
   header {
     display: none;
